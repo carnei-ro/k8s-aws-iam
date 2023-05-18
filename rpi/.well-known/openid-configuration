@@ -1,5 +1,5 @@
 {
-  "issuer": "https://kubernetes.default.svc.cluster.local",
+  "issuer": "https://carnei-ro.github.io/k8s-oidc/rpi",
   "jwks_uri": "https://carnei-ro.github.io/k8s-oidc/rpi/openid/v1/jwks",
   "response_types_supported": [
     "id_token"
