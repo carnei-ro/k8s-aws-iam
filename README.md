@@ -18,4 +18,6 @@ kubectl get --raw '/openid/v1/jwks' | jq . > ./${CLUSTER_NAME}/openid/v1/jwks
 
 ## Serving content
 
-Now go to your GitHub repository and enable GitHub Pages for the `main` branch.
+Now go to your GitHub repository and enable GitHub Pages for the `main` branch on `/ (root)`.
+
+Add an empty file called `.nojekyll` to the root of the `main` branch.
