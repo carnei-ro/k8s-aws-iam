@@ -30,12 +30,12 @@ There are many ways to expose the OpenID Connect Discovery and JWKs. You could u
 
 #### Creating the files
 
-Let's say the cluster id called `rpi`, the GitHub user is `carnei-ro`, the GitHub repo is `k8s-oidc`.
+Let's say the cluster id called `rpi`, the GitHub user is `carnei-ro`, the GitHub repo is `k8s-aws-iam`.
 
 ```bash
 CLUSTER_NAME="rpi"
 GITHUB_USER="carnei-ro"
-GITHUB_REPO="k8s-oidc"
+GITHUB_REPO="k8s-aws-iam"
 JWKS_URI="https://${GITHUB_USER}.github.io/${GITHUB_REPO}/${CLUSTER_NAME}/openid/v1/jwks"
 ISSUER="${GITHUB_USER}.github.io/${GITHUB_REPO}/${CLUSTER_NAME}"
 
@@ -70,7 +70,7 @@ If you're using GitHub pages, the `issuer` will be `https://${GITHUB_USER}.githu
 We can do that by changing the `kube-apiserver` flag `service-account-issuer` in control plane. e.g:
 
 ```bash
-kube-apiserver --service-account-issuer=https://carnei-ro.github.io/k8s-oidc/rpi --service-account-key-file=/etc/kubernetes/ssl/sa.pub --service-account-lookup=True --service-account-signing-key-file=/etc/kubernetes/ssl/sa.key # many other flags ....
+kube-apiserver --service-account-issuer=https://carnei-ro.github.io/k8s-aws-iam/rpi --service-account-key-file=/etc/kubernetes/ssl/sa.pub --service-account-lookup=True --service-account-signing-key-file=/etc/kubernetes/ssl/sa.key # many other flags ....
 ```
 
 Now, check how the Service Account Token looks like by `exec` into a running pod and getting the token from the mounted file.
