@@ -91,6 +91,40 @@ Go to IAM, and creates a new `Identity Provider` with the following settings:
 - Provider URL: https://${ISSUER}
 - Audience: sts.amazonaws.com
 
+<details>
+  <summary>Terraform Code</summary>
+
+  ```terraform
+  locals {
+    issuer = "carnei-ro.github.io/k8s-aws-iam/rpi"
+
+    url = format("https://%s", local.issuer)
+  }
+
+  data "tls_certificate" "this" {
+    url = local.url
+  }
+
+  resource "aws_iam_openid_connect_provider" "this" {
+    url             = local.url
+    client_id_list  = ["sts.amazonaws.com"]
+    thumbprint_list = [data.tls_certificate.this.certificates[0].sha1_fingerprint]
+  }
+
+  output "oidc_provider_arn" {
+    value = aws_iam_openid_connect_provider.this.arn
+  }
+
+  output "oidc_provider_id" {
+    value = aws_iam_openid_connect_provider.this.id
+  }
+
+  output "oidc_provider_url" {
+    value = aws_iam_openid_connect_provider.this.url
+  }
+  ```
+</details>
+
 Then create/edit the desired IAM `Role` to include the new `Identity Provider` and add the following `Trust Relationship`:
 
 ```json
