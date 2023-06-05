@@ -2,12 +2,11 @@
   "keys": [
     {
       "use": "sig",
-      "kty": "EC",
-      "kid": "IP_a7IVv8HT2sMr5gPG12dUu8hvnhX4HyqGqErIAnRw",
-      "crv": "P-256",
-      "alg": "ES256",
-      "x": "GzSxXfyAfteSNiKTvcF1N9Q60K_wlL_CweJJjQLOLQA",
-      "y": "3QkgxE3ypnXarcglMMdHxzE6po2me-2dSLxEPOxgpXE"
+      "kty": "RSA",
+      "kid": "R-ZQ6tQzqBPJy0PUg74utXWonhcTmHinKRR4qBpCOWE",
+      "alg": "RS256",
+      "n": "oCxBXx0-mtY8rVE3GK9pz-ISq-bSJSy5K-2_R4ekE0KbB1CHWQZ8_PT6ZCbLjQFJMQzl7n7A4Ax5Z91BR1LAeaG6yKRCwl1yyzEqgQ0UQ_HptpblOgpWzIwNp9kd4sNdM__Er8k-z9YfSPAPPLlQbnsk-nPmq1FfwaJKlIEilrsJyBLI4J_H0c6fF4r_WyELH3onugJYKb9wP2kcolcKTCIfkIqzrMiwYxrkpPb2nQYs934n6pA4xae-bkYkdkFET0qhN9-N3HqeP8aaDnOplPtGPI_g0jtajaMVTr06nJ1pFpCoeAYYItBzUXA8mALmWD4shseI9C0ML4FRc0q7ntlxti9p7oS5WbaBl0vHgSyy8E7P0PuIZ9UIvAOGWC9g4v-UtPXppuJYhf12aIvxKw1gDlPR1w3DoD3qK7hhuXDXbWhwJ3ecKzTOUTf--xLhBrenC56FsgdTliVi9JSmVCT9YhqnNPoJpzPxNBD2Vu0uTcUyk0FPHNWZ3oCJi8NcvaHUzx5icigDUF5plcdco4lknrOcQXpmFpeovtWwujNcPMWkTs4AfgtrnZAfNTA01FEQmgckwJRHpTUV6kmfBxbl3xuo9M6G7U1W9Vr5cJ2jygqY6nPyLtg7u6UfvPzrHLCHapwkFmv4n0xo1ho2IHBGEYdZSYHrKphQ5s4rDmU",
+      "e": "AQAB"
     }
   ]
 }
