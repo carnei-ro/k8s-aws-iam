@@ -1,0 +1,13 @@
+{
+  "issuer": "https://carnei-ro.github.io/k8s-aws-iam/oci-k8s",
+  "jwks_uri": "https://carnei-ro.github.io/k8s-aws-iam/oci-k8s/openid/v1/jwks",
+  "response_types_supported": [
+    "id_token"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "ES256"
+  ]
+}
